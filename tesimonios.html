@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dejanos tu Experiencia - Raíces del Alma</title>
+    <link rel="icon" type="image/jpeg" href="Gemini_Generated_Image_vt9b1rvt9b1rvt9b.jpg">
+    <!-- Google Fonts & FontAwesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Tu archivo CSS principal -->
+    <link rel="stylesheet" href="raices del alma.css">
+</head>
+<body>
+
+    <!-- Menú de Navegación -->
+    <header>
+        <div class="nav-container">
+            <div style="display: flex; align-items: center; justify-content: center; gap: 8px; color: inherit;">
+                <img src="Gemini_Generated_Image_vt9b1rvt9b1rvt9b.jpg" alt="Logo" class="logo-img">
+                <span>Raíces del Alma</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="page-wrapper">
+        <!-- Sección de Testimonios -->
+        <section class="testimonios-pagina-section">
+            <div class="section-header">
+                <span class="subtitle">Libro de Experiencias</span>
+                <h2>Compartinos cómo te sentiste</h2>
+                <p>Tu opinión nos ayuda a crecer y acompaña a otros a dar el paso hacia su sanación.</p>
+            </div>
+
+            <!-- Formulario para dejar testimonio y estrellas -->
+            <div class="form-testimonio-box">
+                <form id="form-nuevo-testimonio">
+                    <div class="form-group">
+                        <label for="nombre-completo">Nombre y Apellido</label>
+                        <input type="text" id="nombre-completo" placeholder="Ej: María Gómez" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Valoración con Estrellas</label>
+                        <div class="estrellas-selector" id="rating-stars">
+                            <i class="fa-solid fa-star active" data-value="1"></i>
+                            <i class="fa-solid fa-star active" data-value="2"></i>
+                            <i class="fa-solid fa-star active" data-value="3"></i>
+                            <i class="fa-solid fa-star active" data-value="4"></i>
+                            <i class="fa-solid fa-star active" data-value="5"></i>
+                        </div>
+                        <input type="hidden" id="valor-estrellas" value="5">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="comentario-sesion">Breve comentario de tu experiencia</label>
+                        <textarea id="comentario-sesion" rows="4" placeholder="Contanos brevemente cómo fue tu sesión y qué sentiste..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-main" style="width: 100%;">Publicar mi Experiencia</button>
+                </form>
+            </div>
+
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="index.html" class="btn-main" style="background-color: var(--secondary-color, #7A8B79);">
+                    <i class="fa-solid fa-arrow-left"></i> Volver a la página principal
+                </a>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer Centrado -->
+    <footer style="text-align: center;">
+        <div class="footer-container" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+            <div style="display: flex; align-items: center; justify-content: center; gap: 8px; color: inherit;">
+            </div>
+            <div class="footer-bottom-author" style="margin-top: 10px; border-top: none; padding-top: 0; text-align: center;">
+                <p>&copy; 2026 Raíces del Alma — Todos los derechos reservados.</p>
+                <p style="font-size: 0.75rem; opacity: 0.7; margin-top: 5px;">Desarrollo y diseño web por Tomas Teja.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script de Interactividad para Estrellas -->
+    <script>
+        // Sistema de selección de estrellas visual
+        const stars = document.querySelectorAll('#rating-stars i');
+        const ratingInput = document.getElementById('valor-estrellas');
+
+        stars.forEach((star, index) => {
+            star.addEventListener('click', () => {
+                const valor = star.getAttribute('data-value');
+                ratingInput.value = valor;
+                stars.forEach((s, i) => {
+                    if (i < valor) {
+                        s.classList.add('active');
+                    } else {
+                        s.classList.remove('active');
+                    }
+                });
+            });
+        });
+
+        // Manejo del envío del formulario
+        const form = document.getElementById('form-nuevo-testimonio');
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const nombre = document.getElementById('nombre-completo').value.trim();
+            const texto = document.getElementById('comentario-sesion').value.trim();
+
+            if (nombre && texto) {
+                form.reset();
+                // Resetear estrellas a 5 por defecto
+                ratingInput.value = 5;
+                stars.forEach(s => s.classList.add('active'));
+
+                alert('¡Muchas gracias! Tu experiencia ha sido enviada con éxito.');
+            }
+        });
+    </script>
+</body>
+</html>

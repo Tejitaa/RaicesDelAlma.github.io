@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raíces del Alma - Terapias Espirituales</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="Gemini_Generated_Image_vt9b1rvt9b1rvt9b.jpg">
+
+    <!-- Fuentes de Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600&family=Alex+Brush&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Conexión al archivo CSS externo -->
+    <link rel="stylesheet" href="raices del alma.css">
+
+    <style>
+        /* Regla para convertir los bloques de servicio en enlaces interactivos */
+        a.service-item {
+            display: flex;
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            cursor: pointer;
+        }
+
+        a.service-item:hover {
+            transform: translateY(-3px);
+        }
+
+        /* --- Estilos para la Imagen Interactiva de Productos (Centrada y Agrandada) --- */
+        .productos-section {
+            max-width: 1100px;
+            margin: 60px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .productos-section h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.5rem;
+            color: #3B342C;
+            margin-bottom: 25px;
+        }
+
+        .interactive-image-wrapper {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+            max-width: 1050px;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(163, 140, 108, 0.15);
+        }
+
+        .productos-img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Hotspots / Zonas de Clic */
+        .hotspot {
+            position: absolute;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: background-color 0.25s ease;
+        }
+
+        .hotspot:hover {
+            background-color: rgba(181, 141, 98, 0.18);
+            outline: 2px dashed #b58d62;
+        }
+
+        .hotspot.sales {
+            top: 12%;
+            left: 5%;
+            width: 29%;
+            height: 78%;
+        }
+
+        .hotspot.brumas {
+            top: 12%;
+            left: 35.5%;
+            width: 29%;
+            height: 78%;
+        }
+
+        .hotspot.humos {
+            top: 12%;
+            left: 66%;
+            width: 29%;
+            height: 78%;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Menú de Navegación -->
+    <header>
+        <div class="nav-container">
+            <div style="display: flex; align-items: center; justify-content: center; gap: 8px; color: inherit;">
+                <img src="Gemini_Generated_Image_vt9b1rvt9b1rvt9b.jpg" alt="Raíces del Alma Logo" class="logo-img">
+                <span>Raíces del Alma</span>
+            </div>
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <ul class="nav-links" id="nav-list">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#novedades">Novedades</a></li>
+                <li><a href="#sesiones">Sesiones</a></li>
+                <li><a href="#cursos">Talleres</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="./tesimonios.html">Testimonios</a></li>
+                <li><a href="https://wa.me/5492645197599?text=¡Hola!%20Me%20gustaría%20agendar%20una%20sesión%20en%20Raíces%20del%20Alma." target="_blank" class="btn-agenda">Agenda tu sesión</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Sección Principal / Hero -->
+    <section class="hero" id="inicio">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                Tu alma sabe el camino,
+                <span>yo solo te acompaño</span>
+            </h1>
+            <a href="cosassobremi.html" class="btn-main">Conocé más sobre mí</a>
+        </div>
+        <div class="hero-image">
+            <div class="hero-image-frame">
+                <img src="WhatsApp Image 2026-09-08 at 16.57.50.jpeg" alt="Maria Victoria Senigaglia - Terapeuta Holística">
+            </div>
+            <div class="therapist-name">Maria Victoria Senigaglia</div>
+            <div class="therapist-title">Terapeuta Holística</div>
+        </div>
+    </section>
+
+    <!-- Franja Tierra / Oro Viejo -->
+    <div class="banner-salmon">
+        Un espacio para volver a vos, sanar tu historia y reconectar con tu verdad.
+    </div>
+
+    <!-- Pilares -->
+    <section class="features">
+        <div class="feature-card">
+            <i class="fa-solid fa-spa"></i>
+            <h3>Terapias Holísticas</h3>
+            <p>Sesiones personalizadas para tu bienestar integral.</p>
+        </div>
+        <div class="feature-card">
+            <i class="fa-regular fa-heart"></i>
+            <h3>Acompañamiento Consciente</h3>
+            <p>Te acompaño a transformar y sanar desde la raíz.</p>
+        </div>
+        <div class="feature-card">
+            <i class="fa-solid fa-gem"></i>
+            <h3>Herramientas Espirituales</h3>
+            <p>Recursos para tu evolución y conexión interior.</p>
+        </div>
+        <div class="feature-card">
+            <i class="fa-solid fa-hand-holding-heart"></i>
+            <h3>Escucha Profunda y Amorosa</h3>
+            <p>Un espacio seguro para ser, sentir y soltar.</p>
+        </div>
+    </section>
+
+    <!-- Sección Próximos Talleres / Novedades -->
+    <section class="novedades-section" id="novedades">
+        <div class="novedades-header">
+            <h2>Próximos Talleres y Encuentros</h2>
+            <p>Próximas fechas a confirmar. Anotate en la lista de espera para enterarte primero cuando abramos los cupos.</p>
+        </div>
+
+        <div class="novedades-grid">
+            <!-- Tarjeta Taller 1: Taller de Sombras -->
+            <article class="taller-card">
+                <div class="taller-badge">Próximamente</div>
+                <div class="taller-card-body">
+                    <span class="taller-fecha"><i class="fa-regular fa-calendar-check"></i> Fecha a confirmar</span>
+                    <h3>Taller de Sombras</h3>
+                    <p>Explorá e integrá aquellos aspectos no vistos para abrazar tu totalidad y reconectar con tu poder personal.</p>
+                    <div class="taller-card-footer">
+                        <span class="cupos-info"><i class="fa-solid fa-bell"></i> Lista de espera abierta</span>
+                        <a href="https://wa.me/5492645197599?text=Hola!%20Quiero%20anotarme%20en%20la%20lista%20de%20espera%20para%20el%20Taller%20de%20Sombras." target="_blank" class="btn-inscribirme">
+                            <i class="fa-brands fa-whatsapp"></i> Consultar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Tarjeta Taller 2: Taller de Madre -->
+            <article class="taller-card">
+                <div class="taller-badge">Próximamente</div>
+                <div class="taller-card-body">
+                    <span class="taller-fecha"><i class="fa-regular fa-calendar-check"></i> Fecha a confirmar</span>
+                    <h3>Taller de Madre</h3>
+                    <p><strong>¿Quién soy después de ser mamá?</strong> Saná el vínculo con la energía materna y tu historia transgeneracional.</p>
+                    <div class="taller-card-footer">
+                        <span class="cupos-info"><i class="fa-solid fa-bell"></i> Lista de espera abierta</span>
+                        <a href="https://wa.me/5492645197599?text=Hola!%20Quiero%20anotarme%20en%20la%20lista%20de%20espera%20para%20el%20Taller%20de%20Madre." target="_blank" class="btn-inscribirme">
+                            <i class="fa-brands fa-whatsapp"></i> Consultar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Sesiones y Cursos/Talleres (Grilla de 2 columnas) -->
+    <section class="services-section">
+        <div class="services-container">
+
+            <!-- Columna Sesiones -->
+            <div class="service-column" id="sesiones">
+                <h2>Sesiones</h2>
+
+                <a href="detalle.html?id=biodecodificacion" class="service-item">
+                    <i class="fa-solid fa-leaf"></i>
+                    <div class="service-item-content">
+                        <h3>Biodecodificación</h3>
+                        <p>Comprendé el sentido biológico de lo que te sucede y transformá desde la raíz.</p>
+                    </div>
+                </a>
+
+                <a href="detalle.html?id=canalizacion" class="service-item">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    <div class="service-item-content">
+                        <h3>Canalización</h3>
+                        <p>Conexión profunda con mensajes sutiles y guía espiritual para tu momento presente.</p>
+                    </div>
+                </a>
+
+                <a href="detalle.html?id=mediumnidad" class="service-item">
+                    <i class="fa-solid fa-feather"></i>
+                    <div class="service-item-content">
+                        <h3>Mediumnidad</h3>
+                        <p>Un puente de luz y amor para recibir mensajes del plano espiritual.</p>
+                    </div>
+                </a>
+
+                <a href="detalle.html?id=flores-bach" class="service-item">
+                    <i class="fa-solid fa-seedling"></i>
+                    <div class="service-item-content">
+                        <h3>Terapia floral - Flores de Bach</h3>
+                        <p>Equilibrio y armonización emocional a través de esencias naturales.</p>
+                    </div>
+                </a>
+
+                <a href="detalle.html?id=tarot" class="service-item">
+                    <i class="fa-solid fa-eye"></i>
+                    <div class="service-item-content">
+                        <h3>Tarot (Evolutivo y Terapéutico)</h3>
+                        <p>Herramienta sagrada de introspección, autoconocimiento y guía personal.</p>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Columna Cursos y Talleres -->
+            <div class="service-column" id="cursos">
+                <h2>Talleres</h2>
+
+                <a href="detalle.html?id=taller-economia" class="service-item">
+                    <i class="fa-solid fa-coins"></i>
+                    <div class="service-item-content">
+                        <h3>Taller de Economía</h3>
+                        <p>Trabajá tus creencias, patrones inconscientes y relación con la abundancia.</p>
+                    </div>
+                </a>
+
+                <a href="detalle.html?id=taller-duelo" class="service-item">
+                    <i class="fa-solid fa-heart-crack"></i>
+                    <div class="service-item-content">
+                        <h3>Taller de Duelo</h3>
+                        <p>Un espacio de sostén para transitar pérdidas y habilitar la sanación.</p>
+                    </div>
+                </a>
+
+                <a href="detalle.html?id=taller-sombras" class="service-item">
+                    <i class="fa-solid fa-moon"></i>
+                    <div class="service-item-content">
+                        <h3>Taller de Sombras</h3>
+                        <p>Explorá e integrá aquellos aspectos no vistos para abrazar tu totalidad.</p>
+                    </div>
+                </a>
+
+                <a href="detalle.html?id=taller-madre" class="service-item">
+                    <i class="fa-solid fa-person-breastfeeding"></i>
+                    <div class="service-item-content">
+                        <h3>Taller de Madre</h3>
+                        <p>¿Quién soy después de ser mamá?</p>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Sección de Productos con Imagen Interactiva Agrandada y Centrada -->
+    <section class="productos-section" id="productos">
+        <h2>Productos</h2>
+        
+        <div class="interactive-image-wrapper">
+            <!-- Imagen Principal -->
+            <img src="WhatsApp Image 2026-09-12 at 20.51.25.jpeg" alt="Productos Raíces del Alma" class="productos-img">
+
+            <!-- Zonas Clicqueables sobre cada producto -->
+            <a href="detalle.html?id=sales-del-alma" class="hotspot sales" title="Sales del Alma - Ver Detalle"></a>
+            <a href="detalle.html?id=bruma-del-alma" class="hotspot brumas" title="Brumas del Alma - Ver Detalle"></a>
+            <a href="detalle.html?id=humo-del-alma" class="hotspot humos" title="Humos del Alma - Ver Detalle"></a>
+        </div>
+    </section>
+
+    <!-- Frase Final -->
+    <div class="quote-banner">
+        Escuchar lo sutil, despertar lo esencial
+    </div>
+
+    <!-- Pie de Página -->
+    <footer id="contacto" style="text-align: center; padding: 40px 20px; background-color: #EAE3DC; border-top: 1px solid #D9CEBE;">
+        <div class="footer-container" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px;">
+            <div style="display: flex; align-items: center; justify-content: center; gap: 8px; color: #3B342C; font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 600;">
+                <img src="Gemini_Generated_Image_vt9b1rvt9b1rvt9b.jpg" alt="Raíces del Alma Logo" class="logo-img" style="width: 30px; height: 30px; border-radius: 50%;">
+                <span>Raíces del Alma</span>
+            </div>
+            <div class="footer-bottom-author" style="margin-top: 5px; text-align: center;">
+                <p style="margin: 0; color: #595046; font-size: 0.9rem;">&copy; 2026 Raíces del Alma — Todos los derechos reservados.</p>
+                <p style="font-size: 0.75rem; opacity: 0.75; margin-top: 4px; color: #595046;">Desarrollo y diseño web por Tomas Teja.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script Menú Hamburguesa -->
+    <script>
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navList = document.getElementById('nav-list');
+
+        if (mobileMenu && navList) {
+            mobileMenu.addEventListener('click', () => {
+                navList.classList.toggle('active');
+            });
+
+            const navLinksItems = document.querySelectorAll('.nav-links a');
+            navLinksItems.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (navList.classList.contains('active')) {
+                        navList.classList.remove('active');
+                    }
+                });
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,944 @@
+/* Paleta de colores inspirada en la imagen del Árbol de la Vida */
+:root {
+    --bg-color: #FBF8F3;        /* Fondo marfil/crema suave de la imagen */
+    --bg-alt: #F3EFEA;          /* Fondo alternativo en tono lino cálido */
+    --primary-color: #A38C6C;    /* Tono oro viejo / marrón suave del árbol */
+    --primary-dark: #826E52;     /* Marrón tierra más profundo para hover */
+    --accent-green: #7D8A70;     /* Verde suave extraído de las hojas */
+    --text-color: #595046;       /* Marrón grisáceo suave para lectura */
+    --title-color: #3B342C;      /* Marrón oscuro elegante para títulos */
+    --font-title: 'Cormorant Garamond', serif;
+    --font-body: 'Montserrat', sans-serif;
+    --font-script: 'Alex Brush', cursive;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* --- Header y Navegación --- */
+header {
+    background-color: rgba(251, 248, 243, 0.95);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(163, 140, 108, 0.1);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: var(--font-title);
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--title-color);
+}
+
+/* Estilo para la imagen del logo (34px) */
+.logo-img {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1.5px solid var(--primary-color);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    align-items: center;
+}
+
+.nav-links a {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-color);
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+.btn-agenda {
+    background-color: var(--primary-color);
+    color: white !important;
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-size: 0.8rem !important;
+    transition: background 0.3s !important;
+}
+
+.btn-agenda:hover {
+    background-color: var(--primary-dark) !important;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--primary-color);
+}
+
+/* --- Hero Section --- */
+.hero {
+    padding: 140px 20px 80px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero-title {
+    font-family: var(--font-title);
+    font-size: 2.8rem;
+    line-height: 1.2;
+    color: var(--title-color);
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+
+.hero-title span {
+    font-family: var(--font-script);
+    font-size: 3.2rem;
+    display: block;
+    color: var(--primary-color);
+}
+
+.hero-subtitle {
+    font-family: var(--font-title);
+    font-style: italic;
+    font-size: 1.3rem;
+    color: var(--accent-green);
+    margin-bottom: 25px;
+}
+
+.btn-main {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px 28px;
+    border-radius: 25px;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s;
+}
+
+.btn-main:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+/* Foto estilo Arco */
+.hero-image {
+    flex: 1;
+    text-align: center;
+}
+
+.hero-image-frame {
+    width: 320px;
+    height: 400px;
+    margin: 0 auto;
+    border-radius: 160px 160px 0 0;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(163, 140, 108, 0.15);
+    border: 6px solid #FFFFFF;
+}
+
+.hero-image-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.therapist-name {
+    margin-top: 15px;
+    font-family: var(--font-script);
+    font-size: 2.2rem;
+    color: var(--title-color);
+}
+
+.therapist-title {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--accent-green);
+}
+
+/* --- Banner Tierra / Oro Viejo --- */
+.banner-salmon {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    font-family: var(--font-title);
+    font-size: 1.8rem;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+/* --- Pilares / Características --- */
+.features {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    text-align: center;
+}
+
+.feature-card {
+    padding: 20px;
+}
+
+.feature-card i {
+    font-size: 2rem;
+    color: var(--accent-green);
+    margin-bottom: 15px;
+}
+
+.feature-card h3 {
+    font-family: var(--font-title);
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: var(--title-color);
+}
+
+.feature-card p {
+    font-size: 0.9rem;
+    color: var(--text-color);
+}
+
+/* --- Secciones (Sesiones y Cursos) --- */
+.services-section {
+    background-color: var(--bg-alt);
+    padding: 80px 20px;
+}
+
+.services-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+.service-column h2 {
+    font-family: var(--font-title);
+    text-align: center;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    color: var(--title-color);
+    text-transform: uppercase;
+}
+
+.service-column h2::after {
+    content: '♡';
+    display: block;
+    font-size: 1rem;
+    color: var(--primary-color);
+    margin-top: 5px;
+}
+
+.service-item {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+    align-items: flex-start;
+}
+
+.service-item i {
+    font-size: 1.4rem;
+    color: var(--accent-green);
+    margin-top: 3px;
+    width: 30px;
+    text-align: center;
+}
+
+.service-item-content h3 {
+    font-family: var(--font-title);
+    font-size: 1.2rem;
+    color: var(--title-color);
+}
+
+.service-item-content p {
+    font-size: 0.88rem;
+    color: var(--text-color);
+}
+
+/* --- Frase Inferior --- */
+.quote-banner {
+    text-align: center;
+    padding: 60px 20px;
+    font-family: var(--font-script);
+    font-size: 2.8rem;
+    color: var(--primary-color);
+}
+
+/* --- Footer --- */
+footer {
+    background-color: #EAE3DC;
+    padding: 30px 20px;
+    border-top: 1px solid #D9CEBE;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    font-size: 0.9rem;
+}
+
+.footer-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-info a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-color);
+}
+
+.footer-info a:hover {
+    color: var(--primary-color);
+}
+
+/* Adaptación a Móviles */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--bg-color);
+        padding: 20px;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.05);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .hero {
+        flex-direction: column-reverse;
+        padding-top: 100px;
+        text-align: center;
+    }
+
+    .hero-image-frame {
+        width: 260px;
+        height: 330px;
+    }
+
+    .services-container {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+/* --- MEJORAS VISUALES Y ANIMACIONES --- */
+
+/* Transición suave global */
+a, button, .service-item, .feature-card {
+    transition: all 0.3s ease-in-out;
+}
+
+/* Efecto Hover moderno en las tarjetas de servicios y cursos del Inicio */
+.service-item {
+    padding: 12px;
+    border-radius: 12px;
+    background: transparent;
+}
+
+.service-item:hover {
+    background-color: #FFFFFF;
+    transform: translateX(6px);
+    box-shadow: 0 5px 15px rgba(163, 140, 108, 0.1);
+}
+
+.service-item:hover i {
+    transform: scale(1.2);
+}
+
+/* Efecto sutil en los pilares (features) */
+.feature-card {
+    background-color: #FFFFFF;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(163, 140, 108, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(163, 140, 108, 0.15);
+}
+
+/* Animación sutil para los botones principales */
+.btn-main:hover {
+    box-shadow: 0 6px 20px rgba(163, 140, 108, 0.3);
+}
+
+/* --- ESTILOS PARA LA PÁGINA DE DETALLE (detalle.html) --- */
+.detail-section {
+    padding: 140px 20px 80px;
+    max-width: 900px;
+    margin: 0 auto;
+    min-height: 80vh;
+}
+
+.detail-category {
+    display: inline-block;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--accent-green);
+    background-color: var(--bg-alt);
+    padding: 6px 16px;
+    border-radius: 20px;
+    margin-bottom: 15px;
+}
+
+.detail-title {
+    font-family: var(--font-title);
+    font-size: 2.8rem;
+    color: var(--title-color);
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+.detail-desc {
+    font-size: 1.05rem;
+    color: var(--text-color);
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.detail-box {
+    background-color: var(--bg-alt);
+    border-left: 4px solid var(--primary-color);
+    padding: 20px 25px;
+    border-radius: 0 12px 12px 0;
+    margin-bottom: 30px;
+}
+
+.detail-box p {
+    font-size: 0.95rem;
+    color: var(--title-color);
+}
+
+.back-home {
+    margin-top: 40px;
+    text-align: center;
+}
+/* --- ESTILOS PARA LA PÁGINA DE TESTIMONIOS --- */
+.testimonios-pagina-section {
+    padding: 60px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.form-testimonio-box {
+    background-color: #FFFFFF;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(163, 140, 108, 0.08);
+    border: 1px solid rgba(163, 140, 108, 0.2);
+    margin-bottom: 50px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: var(--title-color);
+    font-size: 0.95rem;
+}
+
+/* Selector de Estrellas interactivo */
+.estrellas-selector {
+    display: flex;
+    gap: 8px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+.estrellas-selector i, .estrellas-output i {
+    color: #d4c5b9; /* Color inactivo */
+    transition: color 0.2s;
+}
+
+.estrellas-selector i.active, .estrellas-output i.active {
+    color: #e6b800; /* Color dorado activo */
+}
+
+/* Grilla de opiniones publicadas */
+.testimonios-grid-publicados {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.testimonio-card-publico {
+    background-color: #FFFFFF;
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: 0 4px 15px rgba(163, 140, 108, 0.06);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-top: 4px solid var(--primary-color, #a38c6c);
+}
+
+.estrellas-output {
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+}
+/* --- CORRECCIÓN PARA QUE EL MENÚ NO TAPE EL CONTENIDO AL HACER CLIC --- */
+html {
+    scroll-behavior: smooth;
+    /* Esto desplaza el punto de anclaje un poco más abajo para que la barra fija no tape los títulos */
+    scroll-padding-top: 100px; 
+}
+/* --- CORRECCIÓN DE ESPACIADO EN PÁGINA DE TESTIMONIOS --- */
+.testimonios-pagina-section {
+    padding-top: 150px !important; /* Incrementamos el margen superior para alejarlo por completo del menú fijo */
+}
+/* --- ESTILOS PARA LA FIRMA DE AUTORÍA EN EL FOOTER --- */
+.footer-bottom-author {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(163, 140, 108, 0.2); /* Una línea sutil divisoria */
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--text-color);
+    opacity: 0.8;
+}
+
+.footer-bottom-author span {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+/* --- FIJAR EL FOOTER ABAJO EN TODAS LAS PÁGINAS --- */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.page-wrapper {
+    flex: 1; /* Esto estira el contenido y clava el footer al fondo de la pantalla */
+}
+.btn-agenda {
+    background-color: #b58d62; /* O el color principal de tu botón */
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 500;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Sombreado inicial */
+    transition: all 0.3s ease;
+}
+
+.btn-agenda:hover {
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25); /* Sombreado al pasar el cursor */
+    transform: translateY(-2px);
+}
+/* --- Sección Próximos Talleres / Novedades --- */
+.novedades-section {
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.novedades-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.novedades-header h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.4rem;
+    color: #3B342C;
+    margin-bottom: 10px;
+}
+
+.novedades-header p {
+    color: #595046;
+    font-size: 1rem;
+}
+
+.novedades-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.taller-card {
+    background-color: #FFFFFF;
+    border: 1px solid #f0e6df;
+    border-radius: 16px;
+    padding: 25px;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(163, 140, 108, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.taller-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(163, 140, 108, 0.15);
+}
+
+.taller-badge {
+    position: absolute;
+    top: -12px;
+    right: 20px;
+    background-color: #7D8A70; /* Verde sutil */
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 4px 14px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.taller-badge.badge-urgente {
+    background-color: #b58d62; /* Tono tierra / oro para destacar urgente */
+}
+
+.taller-fecha {
+    display: block;
+    font-size: 0.85rem;
+    color: #A38C6C;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.taller-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    color: #3B342C;
+    margin-bottom: 12px;
+}
+
+.taller-card p {
+    font-size: 0.95rem;
+    color: #595046;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.taller-card-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    border-top: 1px solid #F3EFEA;
+    padding-top: 15px;
+}
+
+.cupos-info {
+    font-size: 0.82rem;
+    color: #826E52;
+    font-weight: 600;
+}
+
+.btn-inscribirme {
+    display: block;
+    text-align: center;
+    background-color: #A38C6C;
+    color: #ffffff;
+    padding: 10px 18px;
+    border-radius: 20px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+.btn-inscribirme:hover {
+    background-color: #826E52;
+}
+
+/* --- Contenedor Principal de Productos --- */
+.productos-banner-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 15px;
+    text-align: center;
+}
+
+.productos-banner-container h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.2rem;
+    color: #3B342C;
+    margin-bottom: 20px;
+}
+
+/* --- Contenedor Relativo para la Imagen e Interactividad --- */
+.interactive-image-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    max-width: 900px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.productos-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* --- Zonas Clicqueables (Hotspots) --- */
+.hotspot {
+    position: absolute;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+/* Efecto hover suave al pasar el cursor sobre la zona del producto */
+.hotspot:hover {
+    background-color: rgba(181, 141, 98, 0.15); /* Sombreado doradito/tierra sutil */
+    outline: 2px dashed #b58d62;
+}
+
+/* Posiciones exactas ajustadas a cada columna de la imagen */
+/* 1. Sales del Alma (Izquierda) */
+.hotspot.sales {
+    top: 15%;
+    left: 8%;
+    width: 27%;
+    height: 70%;
+}
+
+/* 2. Brumas del Alma (Centro) */
+.hotspot.brumas {
+    top: 15%;
+    left: 36%;
+    width: 27%;
+    height: 70%;
+}
+
+/* 3. Humos del Alma (Derecha) */
+.hotspot.humos {
+    top: 15%;
+    left: 65%;
+    width: 27%;
+    height: 70%;
+}
+
+/* Ajustes para celulares */
+@media (max-width: 600px) {
+    .productos-banner-container {
+        margin: 25px auto;
+        padding: 0 10px;
+    }
+}
+/* Estilo para talleres que ya fueron dados */
+.badge-finalizado {
+    background-color: #8c857b !important; /* Gris sutil */
+}
+
+.taller-card.taller-finalizado {
+    opacity: 0.85;
+}
+
+.btn-proxima-fecha {
+    background-color: #7D8A70 !important; /* Verde o tono neutro */
+}
+/* --- Estilos para Tarjeta Única de Próximos Talleres --- */
+.novedades-grid-single {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.taller-card-combo {
+    background-color: #FFFFFF;
+    border: 1px solid #f0e6df;
+    border-radius: 16px;
+    padding: 35px 30px 25px;
+    position: relative;
+    box-shadow: 0 6px 20px rgba(163, 140, 108, 0.1);
+    text-align: left;
+}
+
+.taller-subtitle {
+    font-size: 0.95rem;
+    color: #595046;
+    margin-bottom: 20px;
+}
+
+.lista-talleres-proximos {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 25px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.lista-talleres-proximos li {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 14px 18px;
+    background-color: #fcf8f5;
+    border-radius: 10px;
+    border-left: 3px solid #A38C6C;
+}
+
+.lista-talleres-proximos li i {
+    color: #A38C6C;
+    font-size: 1.2rem;
+    margin-top: 3px;
+}
+
+.lista-talleres-proximos li strong {
+    display: block;
+    color: #3B342C;
+    font-size: 1.1rem;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.lista-talleres-proximos li span {
+    font-size: 0.9rem;
+    color: #595046;
+    display: block;
+    margin-top: 2px;
+}
+
+@media (max-width: 600px) {
+    .taller-card-combo {
+        padding: 25px 18px;
+    }
+}
+html, body {
+    max-width: 100%;
+    overflow-x: hidden; /* Elimina el scroll horizontal */
+}
+/* Reemplazá '.menu-toggle' por la clase de tu botón de 3 rayitas */
+.menu-toggle {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 9999; /* Asegura que quede siempre por encima de todo */
+}
+/* Indicador visual sobre las imágenes para celulares */
+@media (max-width: 768px) {
+    .producto-card {
+        position: relative;
+    }
+
+    .producto-card::after {
+        content: "👆 Toca para ver detalle";
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        background-color: rgba(0, 0, 0, 0.75);
+        color: #ffffff;
+        font-size: 11px;
+        padding: 4px 8px;
+        border-radius: 12px;
+        pointer-events: none; /* No interfiere con el clic */
+    }
+}
+@media (max-width: 768px) {
+
+    /* 1. Contenedor de los pilares en cuadrícula de 2 columnas x 2 filas */
+    .pilares-contenedor {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important; /* Fuerza 2 columnas iguales */
+        gap: 10px !important;                             /* Espacio reducido entre tarjetas */
+        padding: 10px 5px !important;
+    }
+
+    /* 2. Reducir tamaño y relleno de cada tarjeta de pilar */
+    .pilar-card {
+        padding: 10px !important;          /* Menos espacio interno */
+        text-align: center;
+    }
+
+    /* 3. Reducir tamaño de las imágenes o íconos de los pilares */
+    .pilar-card img, .pilar-card .icono {
+        width: 40px !important;            /* Achica las imágenes para no ocupar alto */
+        height: 40px !important;
+        margin-bottom: 5px !important;
+    }
+
+    /* 4. Achicar el texto de los títulos y descripciones */
+    .pilar-card h3 {
+        font-size: 0.95rem !important;     /* Título más compacto */
+        margin-bottom: 4px !important;
+    }
+
+    .pilar-card p {
+        font-size: 0.75rem !important;     /* Texto de descripción más chico */
+        line-height: 1.2 !important;
+    }
+}

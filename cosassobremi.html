@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Mí - Raíces del Alma</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="Gemini_Generated_Image_vt9b1rvt9b1rvt9b.jpg">
+    
+    <!-- Fuentes de Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600&family=Alex+Brush&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* Mantenemos exactamente la misma paleta de colores y estilos base */
+        :root {
+            --bg-color: #FBF8F3;        
+            --bg-alt: #F3EFEA;          
+            --primary-color: #A38C6C;    
+            --primary-dark: #826E52;     
+            --accent-green: #7D8A70;     
+            --text-color: #595046;       
+            --title-color: #3B342C;      
+            --font-title: 'Cormorant Garamond', serif;
+            --font-body: 'Montserrat', sans-serif;
+            --font-script: 'Alex Brush', cursive;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.8;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* --- Header y Navegación --- */
+        header {
+            background-color: rgba(251, 248, 243, 0.95);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(163, 140, 108, 0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-family: var(--font-title);
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: var(--title-color);
+        }
+
+        .logo-img {
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 1.5px solid var(--primary-color);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-color);
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .btn-agenda {
+            background-color: var(--primary-color);
+            color: white !important;
+            padding: 8px 18px;
+            border-radius: 20px;
+            font-size: 0.8rem !important;
+            transition: background 0.3s !important;
+        }
+
+        .btn-agenda:hover {
+            background-color: var(--primary-dark) !important;
+        }
+
+        /* --- Contenido de la Historia --- */
+        .about-main {
+            max-width: 800px;
+            margin: 140px auto 80px;
+            padding: 0 20px;
+        }
+
+        .about-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .about-header h1 {
+            font-family: var(--font-title);
+            font-size: 3rem;
+            color: var(--title-color);
+            font-weight: 400;
+            margin-bottom: 10px;
+        }
+
+        .about-header span {
+            font-family: var(--font-script);
+            font-size: 2.8rem;
+            color: var(--primary-color);
+            display: block;
+        }
+
+        .about-image-frame {
+            width: 220px;
+            height: 270px;
+            margin: 0 auto 30px;
+            border-radius: 110px 110px 0 0;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(163, 140, 108, 0.15);
+            border: 5px solid #FFFFFF;
+        }
+
+        .about-image-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .about-text {
+            background-color: var(--bg-alt);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.02);
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+            font-size: 1rem;
+            color: var(--text-color);
+            text-align: justify;
+        }
+
+        .about-text h2 {
+            font-family: var(--font-title);
+            font-size: 1.8rem;
+            color: var(--title-color);
+            margin: 30px 0 15px;
+        }
+
+        .btn-back {
+            display: inline-block;
+            margin-top: 30px;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 10px 25px;
+            border-radius: 25px;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            transition: background 0.3s;
+        }
+
+        .btn-back:hover {
+            background-color: var(--primary-dark);
+        }
+
+        /* --- Footer --- */
+        footer {
+            background-color: #EAE3DC;
+            padding: 30px 20px;
+            border-top: 1px solid #D9CEBE;
+            text-align: center;
+        }
+
+        .footer-info a {
+            color: var(--text-color);
+            font-size: 0.9rem;
+        }
+        
+        .footer-info a:hover {
+            color: var(--primary-color);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Menú de Navegación -->
+    <header>
+        <div class="nav-container">
+            <div style="display: flex; align-items: center; justify-content: center; gap: 8px; color: inherit;">
+                <img src="Gemini_Generated_Image_vt9b1rvt9b1rvt9b.jpg" alt="Raíces del Alma Logo" class="logo-img">
+                <span>Raíces del Alma</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contenido Principal "Sobre Mí" -->
+    <main class="about-main">
+        <div class="about-header">
+            <div class="about-image-frame">
+                <img src="WhatsApp Image 2026-09-08 at 16.57.50.jpeg" alt="Maria Victoria Senigaglia">
+            </div>
+            <h1>Mi Camino y Propósito</h1>
+            <span>Maria Victoria Senigaglia</span>
+        </div>
+
+        <div class="about-text">
+            <h2>Mi camino hacia Raíces del Alma</h2>
+            <p>Hay caminos que elegimos… y hay caminos que, de alguna manera, nos encuentran.
+Mi camino como terapeuta holística comenzó en uno de los momentos más dolorosos de mi vida: la pérdida de mi primera bebé biológica.
+Durante mucho tiempo busqué respuestas. Necesitaba comprender por qué había sucedido, qué sentido podía tener una experiencia tan profunda y, sobre todo, para qué me tocaba atravesarla.
+En medio de ese dolor conocí la Bioexistencia Consciente.
+Y algo dentro de mí comenzó a cambiar.
+No encontré una explicación que borrara el dolor, sino una nueva manera de comprenderlo. Pude comenzar a mirar mi historia desde otro lugar, a encontrar un sentido y, poco a poco, a transitar mi duelo desde el amor.
+Ese proceso me transformó.
+Comprendí que aquello que había vivido no tenía por qué convertirse solamente en una herida. También podía convertirse en una puerta. Una puerta hacia el conocimiento de mí misma, hacia la conciencia y hacia un propósito mayor.
+Y así comenzó mi camino.
+Soy Licenciada en Gestión Ambiental, pero la vida me fue mostrando que había otra manera en la que quería poner mis conocimientos, mi sensibilidad y mi experiencia al servicio de los demás.
+Quise convertirme en una herramienta para acompañar a aquellas personas que, como alguna vez me ocurrió a mí, se encuentran atravesando un dolor, una crisis, un duelo, un bloqueo o simplemente sienten que han perdido el rumbo y necesitan volver a encontrarse.
+Comencé entonces un profundo camino de formación y aprendizaje.
+Me especialicé en Bioexistencia Consciente, y posteriormente profundicé en Tarot Evolutivo y Terapéutico y en Flores de Bach, integrando diferentes herramientas que permiten mirar al ser humano de una manera amorosa, consciente e integral.
+Pero existe otra parte de mi historia que viene desde mucho antes.
+Desde muy pequeña tuve experiencias y percepciones relacionadas con aquello que no podía explicar. Podía percibir y ver presencias que pertenecían, para mí, a un plano sutil o álmico. Durante muchos años no comprendía qué significaba aquello que experimentaba ni cómo relacionarme con esa sensibilidad.
+Con el tiempo, a medida que fui creciendo y desarrollándome espiritualmente, comencé a comprender que esa sensibilidad también formaba parte de mi camino.
+Busqué conocimiento, formación y herramientas para comprenderla y aprender a trabajar desde un lugar consciente, respetuoso y protegido.
+Hoy, después de muchos años de recorrido, puedo mirar hacia atrás y reconocer cuánto me ha enseñado cada experiencia.
+Por mi consultorio han pasado muchas personas con sus historias, sus preguntas, sus dolores, sus miedos y sus búsquedas.
+Y una de las cosas más hermosas de este camino ha sido acompañarlas a descubrir que muchas veces, cuando logramos tomar conciencia de aquello que estamos viviendo, reconocer lo que necesitamos liberar y comenzar a escucharnos desde otro lugar, también podemos abrir la puerta a una nueva manera de vivir.
+No creo en caminos mágicos ni en respuestas que alguien pueda darte desde afuera.
+Creo en el acompañamiento.
+Creo en la conciencia.
+Creo en la posibilidad de mirar nuestra historia con amor, comprender aquello que nos atraviesa y recuperar poco a poco nuestra propia fuerza.
+Porque nadie puede recorrer tu camino por vos.
+Pero a veces necesitamos que alguien nos acompañe mientras volvemos a encontrarlo.
+</p>
+            <h2>Así nació Raíces del Alma</h2>
+            <p>Un espacio creado desde mi propia experiencia, desde mi formación y, sobre todo, desde el profundo respeto por cada historia que llega hasta mí.
+Hoy sé que aquella experiencia que alguna vez me hizo preguntarme “¿por qué?” y “¿para qué?”, también fue el comienzo de una nueva etapa de mi vida.
+Y quizás ese sea uno de los aprendizajes más profundos que puedo compartir:
+A veces, aquello que llega para transformarnos también termina revelándonos quiénes somos y cuál es el camino que nuestra alma nos invita a recorrer.
+Soy Victoria Senigaglia, Terapeuta Holística, y desde Raíces del Alma te acompaño a volver a vos.
+Porque tu alma sabe el camino.
+Yo sólo te acompaño. </p>
+            
+
+            <a href="index.html" class="btn-back"><i class="fa-solid fa-arrow-left"></i> Volver al Inicio</a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div style="display: flex; align-items: center; justify-content: center; gap: 8px; color: inherit;">
+            </div>
+            <div class="footer-bottom-author" style="margin-top: 10px; border-top: none; padding-top: 0;">
+                <p>&copy; 2026 Raíces del Alma — Todos los derechos reservados.</p>
+                <p style="font-size: 0.75rem; opacity: 0.7; margin-top: 5px;">Desarrollo y diseño web por Tomas Teja.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
