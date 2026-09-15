@@ -942,3 +942,46 @@ html, body {
         line-height: 1.2 !important;
     }
 }
+/* --- REGULARES PARA CELULARES (Pilares en 2x2) --- */
+@media screen and (max-width: 768px) {
+
+    /* 1. Contenedor de Pilares: Fuerza la grilla de 2 columnas */
+    .features {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important; /* 2 columnas iguales */
+        gap: 12px !important;                             /* Espacio entre tarjetas */
+        padding: 20px 12px !important;                   /* Relleno compacto */
+        max-width: 100% !important;
+    }
+
+    /* 2. Tarjetas individuales de cada pilar */
+    .feature-card {
+        padding: 15px 10px !important;                   /* Achica el alto interno */
+        text-align: center !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        margin: 0 !important;
+    }
+
+    /* 3. Íconos de las tarjetas */
+    .feature-card i {
+        font-size: 1.5rem !important;                     /* Achica el ícono */
+        margin-bottom: 8px !important;
+    }
+
+    /* 4. Título de cada pilar */
+    .feature-card h3 {
+        font-size: 0.95rem !important;                   /* Texto más compacto */
+        line-height: 1.2 !important;
+        margin-bottom: 6px !important;
+    }
+
+    /* 5. Descripción de cada pilar */
+    .feature-card p {
+        font-size: 0.78rem !important;                   /* Texto secundario chico */
+        line-height: 1.25 !important;
+        margin: 0 !important;
+    }
+}
